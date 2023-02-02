@@ -16,7 +16,7 @@ But we can have an Animal Pointer.
 
 Animal *aptr;// WORKS!
 
-Compiler requires all classes inheriting Animal to implement that pure virtual function. Otherwise, they become Abstract.
+Compiler requires all classes inheriting Animal to implement that PURE VIRTUAL function. Otherwise, they become Abstract.
 
 CONCRETE CLASS
 
