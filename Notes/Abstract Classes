@@ -1,0 +1,23 @@
+ABSTRACT CLASS
+
+When we have a VIRTUAL function in the class that is set = 0 (called PURE VIRTUAL), that class is ABSTRACT meaning none of it's functionality is implemented.
+
+class Animal {
+public:
+  virtual void makeNoise() = 0;
+  void eat();
+}
+
+We cannot INSTANTIATE an Abstract class.
+
+Animal a; // Will not work!
+
+But we can have an Animal Pointer.
+
+Animal *aptr;// WORKS!
+
+Compiler requires all classes inheriting Animal to implement that pure virtual function. Otherwise, they become Abstract.
+
+CONCRETE CLASS
+
+When a class has no VIRTUAL function and therefore can be instantiated, it is called CONCRETE.
