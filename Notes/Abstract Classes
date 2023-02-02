@@ -21,3 +21,24 @@ Compiler requires all classes inheriting Animal to implement that PURE VIRTUAL f
 CONCRETE CLASS
 
 When a class has no VIRTUAL function and therefore can be instantiated, it is called CONCRETE.
+
+OVERRIDE AND CONST
+
+Example:
+
+class SalariedEmployee : public Employee 
+{
+public:
+   SalariedEmployee( const std::string &, const std::string &, 
+      const std::string &, double = 0.0 );
+   virtual ~SalariedEmployee() { } // virtual destructor
+   void setWeeklySalary( double ); // set weekly salary
+   double getWeeklySalary() const; // return weekly salary, CANNOT CHANGE VARIABLES
+   // keyword virtual signals intent to override
+   virtual double earnings() const override; // calculate earnings, CANNOT CHANGE VARIABLES, OVERRIDES PARENT CLASS FUNCTION
+   virtual void print() const override; // print object, CANNOT CHANGE VARIABLES, OVERRIDES PARENT CLASS FUNCTION
+private:
+   double weeklySalary; // salary per week
+}; // end class SalariedEmployee
+
+In the example above, the keyword CONST after "print()" tells the compiler that the function print is not allowed to change any member variable!
