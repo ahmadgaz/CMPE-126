@@ -1,0 +1,14 @@
+Templates:
+Templates allow the type in a program to be variable.
+Sort Program:
+Ints:     5   7   8   2   1
+Doubles: 5.1 7.2 8.4 2.1 1.5
+Chars:    a   b   q   c   g
+
+template <class Type> // define a template where Type varies
+class arrayListType
+{
+protected:
+  Type *list;
+...
+}
