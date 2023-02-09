@@ -1,0 +1,51 @@
+Linked Lists:
+
+class ListNode {
+public:
+  int value;
+  ListNode *next;
+  
+  ListNode(int newValue) {
+    value = newValue;
+    next = nullptr;
+  }
+}
+
+class LinkedList {
+private:
+  ListNode *head;
+public:
+  LinkedList() {
+    head = nullptr;
+  }
+  void appendNode(int);
+  void display();
+}
+
+void LinkedList::appendNode(int newValue) {
+  ListNode *newNode;
+  ListNode *nodePtr;
+  
+  newNode = new ListNode(newValue);
+  
+  if(!head) {
+    head = newNode;
+  }else {
+    nodePtr = head;
+    
+    // Find the most recent nullptr in the list and point it to the newNode
+    while(nodePtr->next != nullptr) {
+      nodePtr = nodePtr->next;
+    }
+    nodePtr->next = newNode;
+  }
+}
+
+void LinkedList::display() {
+  ListNode *nodePtr;
+  nodePtr = head;
+  while(nodePtr->next != nullptr) {
+    cout << nodePtr-> value << endl;
+    nodePtr = nodePtr->next;
+  }
+}
