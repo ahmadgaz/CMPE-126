@@ -1,0 +1,9 @@
+#include <array>
+
+int main() {
+  array<int, 4> arr={7, 2, 5};  // Initializes the array
+  array<int, 4>: ut << *it << endl;
+  }
+  
+  return 0;
+}
