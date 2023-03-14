@@ -1,0 +1,31 @@
+Recursive Palindromre String Checker:
+bool isStringPalindrome(string str, int first, int last){
+  if(last - first == 0){
+    return true;
+  }
+  if(last - first == 1){
+    if(str[first] == str[last]){
+      return true;
+    }else{
+      return false;
+    }
+  }
+  if(str[first] != str[last]){
+    return false;
+  }else{
+    return isStringPalindrome(str, first + 1, last - 1);
+  }
+}
+
+Print Stars Recursive Function:
+void printStars(int lines){
+  if(lines > 0){
+    for(int i = lines; i < lines; i++)
+      cout << "*";
+    cout << endl;
+    printStars(lines - 1);
+    for(int i = lines; i < lines; i++)
+      cout << "*";
+    cout << endl;
+  }
+}
